@@ -98,9 +98,12 @@ my_breaks <- c(2, 3,4, 5, 6,7, 8, 9)
 
 
 blog <- ggplot(data=df4, aes(x=time, y=outsourcing)) +
+  
   # geom_line() +
   geom_area(fill="navyblue")+
   theme_minimal()+
+  geom_vline(xintercept = 108, linetype="dashed")+
+  annotate("text", x=105, y=9, label=" National\nCOVID-19 lockdown", angle=90, size=3)+
   theme(legend.position="bottom",legend.key.width = unit(2, 'cm'),legend.key.size = unit(0.5, "cm"))+
   labs(x="Year", y="Private Sector\nTreatments (%)", title = "")+
   scale_x_continuous(breaks=c(10,22,34,46,58,70,82,94, 106, 118, 130),
@@ -158,5 +161,5 @@ yes1 <- cowplot::plot_grid(NULL, blog,  ncol=2, rel_widths = c(0.07, 0.9))
 yes <- cowplot::plot_grid(yes1, plot2, ncol=1)
 
 ggsave(plot=yes, "C:/Users/benjamin.goodair/OneDrive - Nexus365/Documents/GitHub/NHS_privatisation_treatments/Plots/outsourcing_by_treatments.png",width=12, height=8, dpi=600)
-ggsave(plot=blog, "C:/Users/benjamin.goodair/OneDrive - Nexus365/Documents/GitHub/NHS_privatisation_treatments/Plots/all_outsourcing.png",width=12, height=4, dpi=600)
+ggsave(plot=blog, "C:/Users/benjamin.goodair/OneDrive - Nexus365/Documents/GitHub/NHS_privatisation_treatments/Plots/all_outsourcing.png",width=12, height=6, dpi=600)
 
