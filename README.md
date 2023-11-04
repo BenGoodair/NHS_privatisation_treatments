@@ -6,5 +6,5 @@ The data is taken from NHS England's referral to treatment time publications - h
 Any questions, please reach out to benjamin.goodair@spi.ox.ac.uk
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/BenGoodair/NHS_privatisation_treatments/blob/main/Plots/outsourcing_by_treatments.png"  />
+  <img src="https://raw.githubusercontent.com/BenGoodair/NHS_privatisation_treatments/main/Plots/outsourcing_by_treatments.png"  />
 </p>
